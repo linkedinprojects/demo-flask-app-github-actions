@@ -8,7 +8,7 @@ image:
   repository: linkedinprojects/demo-flask-app-github-actions
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "11191828578"
+  tag: "11191843634"
 
 ingress:
   enabled: false
