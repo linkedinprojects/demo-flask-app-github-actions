@@ -35,9 +35,9 @@ jobs:
           pytest  # Assuming you are using pytest for testing
 
   # Step 2: Build and Push Docker Image to DockerHub
-  push-docker-image-to-dockerhub:
+  push-docker-image:
     runs-on: ubuntu-latest
-    needs: build
+    needs: build-docker-image
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
