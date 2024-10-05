@@ -1,0 +1,25 @@
+# This is a sample deployment manifest file for a simple web application.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-flask-app
+  labels:
+    app: demo-flask-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-flask-app
+  template:
+    metadata:
+      labels:
+        app: demo-flask-app
+    spec:
+      containers:
+      - name: demo-flask-app
+        image: linkedinprojects/demo-flask-app-github-actions:{{ .Values.image.tag }}
+        ports:
+        - containerPort: 8080
+
+
+        

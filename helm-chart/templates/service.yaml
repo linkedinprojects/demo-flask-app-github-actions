@@ -1,0 +1,15 @@
+# Service for the application
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-flask-app
+  labels:
+    app: demo-flask-app
+spec:
+  ports:
+  - port: 80          # Port exposed by the service
+    targetPort: 8080  # Port on the pod where the application is running
+    protocol: TCP
+  selector:
+    app: demo-flask-app   # This selects the pods with this label
+  type: ClusterIP     # Change to LoadBalancer if you want external access
