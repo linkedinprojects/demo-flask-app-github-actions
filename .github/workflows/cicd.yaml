@@ -35,7 +35,7 @@ jobs:
           pytest  # Assuming you are using pytest for testing
 
   # Step 2: Build and Push Docker Image to DockerHub
-  push-docker-image:
+  push:
     runs-on: ubuntu-latest
     needs: build-docker-image
     steps:
@@ -62,7 +62,7 @@ jobs:
   # Step 3: Update Helm Chart with New Image Tag
   update-newtag-in-helm-chart:
     runs-on: ubuntu-latest
-    needs: push-docker-image
+    needs: push
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
