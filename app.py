@@ -17,7 +17,7 @@ color_codes = {
 }
 
 # Directly setting the background color to green
-COLOR = "green"  
+COLOR = "blue"  
 # Uncomment the following line to use random color generation
 # COLOR = random.choice(["red", "green", "blue", "blue2", "darkblue", "pink"])
 
