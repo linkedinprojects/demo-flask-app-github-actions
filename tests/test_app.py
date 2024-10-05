@@ -1,11 +1,9 @@
 import sys
 import os
+from app import app  # Import your Flask app
 
 # Add the root directory of the project to the Python path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-from app import app  # Import your Flask app
-
 
 def test_home_page():
     client = app.test_client()  # Create a test client
