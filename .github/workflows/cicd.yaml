@@ -8,6 +8,9 @@ on:
       - 'helm-chart/**'
       - 'README.md'
 
+permissions:
+  contents: write  # Add this line to enable push access
+
 jobs:
 
   # Step 1: Build and Test the Python Application
